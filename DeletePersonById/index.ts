@@ -7,7 +7,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
 
     if (!id) {
         context.res = {
-        status: 400,
+        status: 400,  
         body: 'The fields are required!'
         }
         return;

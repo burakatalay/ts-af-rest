@@ -12,13 +12,13 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     const people = db.collection("people")
 
     try {
-        const person = await people.insert(personData)
-        mongo.close();
+        const person = await people.insert(personData);
 
         context.res = {
             status: 201,
             body: person.ops[0]
         }
+        mongo.close();
     } catch (error) {
         context.res = {
             status: 500,
