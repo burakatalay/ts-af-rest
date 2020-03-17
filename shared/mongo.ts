@@ -3,7 +3,7 @@ import { Db, MongoClient } from "mongodb";
 export class MongoDb {
     private client: MongoClient;
     private readonly connectionString = process.env.DB_CONNECTION_STRING || "mongodb://localhost:27017";
-    private readonly dbName = process.env.DB_NAME || "people";
+    private readonly dbName = process.env.DB_NAME || "people"; 
 
     public close() {
         if (this.client) {
