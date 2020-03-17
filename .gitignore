@@ -1,3 +1,4 @@
+.gitignore
 # Logs
 logs
 *.log
@@ -92,3 +93,5 @@ bin
 obj
 appsettings.json
 local.settings.json
+
+.vscode/
