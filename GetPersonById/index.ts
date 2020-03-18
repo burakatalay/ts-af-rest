@@ -21,9 +21,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
 
     try {
 
-        //const body = await people.findOne( {_id: new ObjectID(id)});   
-        const res = await people.find({});
-        const body = await res.toArray();
+        const body = await people.findOne( {_id: new ObjectID(id)});
         mongo.close();
         context.res = {
             status: 200, 
