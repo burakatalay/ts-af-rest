@@ -7,14 +7,18 @@
     "watch": "tsc -w",
     "prestart": "npm run build",
     "start": "func start",
-    "test": "echo \"No tests yet...\""
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "mongodb": "^3.5.5"
   },
   "devDependencies": {
     "@azure/functions": "^1.0.2-beta2",
+    "@types/jest": "^25.1.4",
     "@types/mongodb": "^3.5.2",
-    "typescript": "^3.3.3"
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
   }
 }

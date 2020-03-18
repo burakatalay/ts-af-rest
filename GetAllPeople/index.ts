@@ -1,7 +1,7 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
 import { MongoDb } from '../shared/mongo';
 
-const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
+export const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
     const mongo = new MongoDb();
     await mongo.connect();
     const db = mongo.getDb();
@@ -19,4 +19,4 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
 
 };
 
-export default httpTrigger;
+//export default httpTrigger;
